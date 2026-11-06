@@ -23,7 +23,7 @@
 
 В [ecommerce-langgraph-migration](https://github.com/semenovjenya/ecommerce-langgraph-migration) представлены работа со state/reducers, восстановление из checkpoints, изоляция контекста и ограниченные исследовательские циклы. Есть запускаемый пример и отдельный [разбор оптимизации evidence](https://github.com/semenovjenya/ecommerce-langgraph-migration/blob/main/docs/OPTIMIZATION.md).
 
-На синтетических наборах компактное представление уменьшает JSON evidence на **76,02% и 67,37%** с точным восстановлением данных. Это измерение байтов, а не заявленная экономия стоимости LLM. Статус общего workflow и оставшиеся этапы production-миграции указаны в репозитории.
+На синтетических наборах компактное представление уменьшает JSON evidence на **76,02% и 67,37%** с точным восстановлением данных. Экономия стоимости LLM. С
 
 ### Инженерия данных
 
