@@ -10,13 +10,15 @@
 
 | Проект | Что решает | Что можно оценить в коде |
 | --- | --- | --- |
-| [E-commerce AI Backend](https://github.com/semenovjenya/ecommerce-ai-backend) | Анализ продаж, рекламы, цен, финансов и запасов; подготовка решений | FastAPI, Redis/RQ, доменные агенты, финансовые расчёты, approval, idempotency и аудит |
-| [E-commerce LangGraph Migration](https://github.com/semenovjenya/ecommerce-langgraph-migration) | Выделение агентского runtime из backend и управление состоянием workflow | Пять subgraphs, типизированный state, checkpoints, HTTP tool adapters, ограничения исследовательских вызовов |
+| [E-commerce AI Backend](https://github.com/semenovjenya/ecommerce-ai-backend) · private | Анализ продаж, рекламы, цен, финансов и запасов; подготовка решений | FastAPI, Redis/RQ, доменные агенты, финансовые расчёты, approval, idempotency и аудит |
+| [E-commerce LangGraph Migration](https://github.com/semenovjenya/ecommerce-langgraph-migration) · private | Выделение агентского runtime из backend и управление состоянием workflow | Пять subgraphs, типизированный state, checkpoints, HTTP tool adapters, ограничения исследовательских вызовов |
 | [Wildberries Data Platform](https://github.com/semenovjenya/ETL-WB-portfolio) | Сбор данных маркетплейса, SQL-витрины и прогнозирование | Python ETL, Airflow DAG, PostgreSQL, upsert, контроль свежести, ML-прогнозы и pgvector |
 | [WB Niche Analysis Automation](https://github.com/semenovjenya/wb-niche-analysis-automation) · private | Автоматический сбор данных для анализа ниш и сравнения карточек Wildberries | Playwright, TypeScript/Node.js, Airflow DAG, PostgreSQL, сохранение исходных API-ответов и HTML-отчёты |
 | [Telegram AI Automation](https://github.com/semenovjenya/telegram-ai-automation) | AI-ассистент и сценарии аналитики, размещений и партнёрств в Telegram | LangGraph, FastAPI, Next.js BFF, tenant isolation, история диалогов и demo без внешних credentials |
 | [Langfuse Integration](https://github.com/semenovjenya/ai-ecom-langfuse) · private | Наблюдаемость запросов, инструментов и LLM-вызовов в AI-ECOM | Python, Langfuse/OpenTelemetry, вложенные traces, usage и стоимость, управление промптом и фильтрация payload |
 | [AI-ECOM MCP](https://github.com/semenovjenya/ai-ecom-mcp) · private | Подключение исследовательских инструментов AI-KAM к Codex через MCP | Python-пакет запуска stdio-сервера, конфигурация подключения и проверка совместимости с backend |
+
+Проекты с пометкой `private` доступны только пользователям с выданными правами; это относится и к ссылкам на их документацию и примеры ниже.
 
 ### Backend и бизнес-логика
 
@@ -70,8 +72,8 @@
 
 ## С чего начать знакомство
 
-**Python/backend:** [E-commerce AI Backend](https://github.com/semenovjenya/ecommerce-ai-backend).  
-**AI engineering:** [LangGraph runtime и оптимизация](https://github.com/semenovjenya/ecommerce-langgraph-migration).  
+**Python/backend:** [E-commerce AI Backend](https://github.com/semenovjenya/ecommerce-ai-backend) · private.  
+**AI engineering:** [LangGraph runtime и оптимизация](https://github.com/semenovjenya/ecommerce-langgraph-migration) · private.  
 **Data engineering:** [ETL и Airflow](https://github.com/semenovjenya/ETL-WB-portfolio).  
 **Интеграция продукта:** [Telegram AI Automation](https://github.com/semenovjenya/telegram-ai-automation).
 
