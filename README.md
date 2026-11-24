@@ -14,6 +14,8 @@
 | [E-commerce LangGraph Migration](https://github.com/semenovjenya/ecommerce-langgraph-migration) | Выделение агентского runtime из backend и управление состоянием workflow | Пять subgraphs, типизированный state, checkpoints, HTTP tool adapters, ограничения исследовательских вызовов |
 | [Wildberries Data Platform](https://github.com/semenovjenya/ETL-WB-portfolio) | Сбор данных маркетплейса, SQL-витрины и прогнозирование | Python ETL, Airflow DAG, PostgreSQL, upsert, контроль свежести, ML-прогнозы и pgvector |
 | [Telegram AI Automation](https://github.com/semenovjenya/telegram-ai-automation) | AI-ассистент и сценарии аналитики, размещений и партнёрств в Telegram | LangGraph, FastAPI, Next.js BFF, tenant isolation, история диалогов и demo без внешних credentials |
+| [Langfuse Integration](https://github.com/semenovjenya/ai-ecom-langfuse) · private | Наблюдаемость запросов, инструментов и LLM-вызовов в AI-ECOM | Python, Langfuse/OpenTelemetry, вложенные traces, usage и стоимость, управление промптом и фильтрация payload |
+| [AI-ECOM MCP](https://github.com/semenovjenya/ai-ecom-mcp) · private | Подключение исследовательских инструментов AI-KAM к Codex через MCP | Python-пакет запуска stdio-сервера, конфигурация подключения и проверка совместимости с backend |
 
 ### Backend и бизнес-логика
 
@@ -33,13 +35,21 @@
 
 В [telegram-ai-automation](https://github.com/semenovjenya/telegram-ai-automation) запрос проходит через Next.js BFF и authentication gateway к AI workflow. JWT хранится в HttpOnly-cookie, история разделяется по tenant, а live-репост требует структурированного подтверждения. Локальный пример показывает три маршрута агента без Telegram-аккаунта и OpenAI-ключа.
 
+### Наблюдаемость и MCP
+
+В [Langfuse Integration](https://github.com/semenovjenya/ai-ecom-langfuse) запросы, доменные инструменты и LLM-вызовы связываются в общую трассу через OpenTelemetry. Интеграция передаёт usage и стоимость из ответа провайдера, управляет версиями промпта и ограничивает содержимое телеметрии. Сбои наблюдаемости не меняют результат бизнес-функций.
+
+[AI-ECOM MCP](https://github.com/semenovjenya/ai-ecom-mcp) предоставляет отдельный Python-пакет запуска исследовательского MCP `ai_kam_research` для Codex. Инструменты чтения данных, SQL, расчётов и исследования SKU исполняет существующий backend AI-ECOM. Совместимость проверяется сравнением ответов при прямом запуске сервера и через пакет.
+
+Оба репозитория приватные; ссылки доступны пользователям с выданными правами.
+
 ## Технические навыки
 
 | Направление | Инструменты и практики |
 | --- | --- |
 | Backend | Python, FastAPI, REST, asyncio, WebSocket/SSE, Redis/RQ |
 | Данные | PostgreSQL, SQL, Airflow, ETL, аналитические витрины, pgvector |
-| AI | LangGraph, LangChain, OpenAI Agents SDK, RAG, typed tools, checkpoints |
+| AI | LangGraph, LangChain, OpenAI Agents SDK, RAG, MCP, typed tools, checkpoints |
 | Надёжность | Pytest, валидация контрактов, idempotency, обработка сбоев, проверка источников |
 | Интеграция и эксплуатация | Docker Compose, Next.js/TypeScript BFF, Prometheus, Langfuse/LangSmith |
 
